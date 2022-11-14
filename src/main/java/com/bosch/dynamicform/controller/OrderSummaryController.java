@@ -13,7 +13,7 @@ public class OrderSummaryController implements OrderSummaryApi {
     }
 
     @Override
-    public ResponseEntity<String> fetchOrderSummary(String orderId) {
+    public ResponseEntity<String> fetchOrderSummary(String orderId) throws Exception {
         return orderSummaryService.fetchOrderSummary(orderId);
 
     }

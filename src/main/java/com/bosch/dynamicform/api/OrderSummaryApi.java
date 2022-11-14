@@ -19,6 +19,6 @@ public interface OrderSummaryApi {
     @RequestMapping(produces = {MediaType.APPLICATION_JSON_VALUE}, consumes = {
             MediaType.APPLICATION_JSON_VALUE}, method = RequestMethod.GET)
     // @PreAuthorize("permitAll")
-    public ResponseEntity<String> fetchOrderSummary(@PathVariable String orderId);
+    public ResponseEntity<String> fetchOrderSummary(@PathVariable String orderId) throws Exception;
 
 }
