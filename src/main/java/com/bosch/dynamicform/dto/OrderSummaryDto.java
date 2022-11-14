@@ -1,8 +1,11 @@
 package com.bosch.dynamicform.dto;
 
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class OrderSummaryDto {
 
     private String orderId;
