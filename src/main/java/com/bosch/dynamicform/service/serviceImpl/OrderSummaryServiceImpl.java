@@ -16,14 +16,20 @@ public class OrderSummaryServiceImpl implements OrderSummaryService {
 
     @Override
     public ResponseEntity<String> fetchOrderSummary(String orderId) throws Exception {
-//      String usersInfo=  feignUserInfo.getUserdatas(id);
+//      String usersInfo=  feignUserInfo.SystemUser(id);
 //       User user= usersInfo.getUser;
 //      if(user.equals("seller")||user == "seller"){
-//          git
+//          getBuyerAddress();
 //      }
+//        if(user.equals("Buyer")||user == "seller"){
+//          getSellerAddress();
+//      }if(user.equals("Admin")||user == "seller"){
+////      getBuyerAddress();
+//        getSellerAddress();
+////      }
         Optional byId = orderSummaryRepository.findById(orderId);
-        if(byId.isEmpty() || byId==null){
-            throw new Exception("Oder not found by given orderId :"+orderId);
+        if (byId.isEmpty() || byId == null) {
+            throw new Exception("Oder not found by given orderId :" + orderId);
         }
         Object orders = byId.get();
 
